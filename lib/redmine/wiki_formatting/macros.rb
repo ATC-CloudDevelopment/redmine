@@ -178,6 +178,11 @@ module Redmine
         )
       end
 
+      desc "br."
+      macro :br do |obj, args|
+        raw "<br>"
+      end
+
       desc "Displays a list of all available macros, including description if available."
       macro :macro_list do |obj, args|
         out = ''.html_safe
